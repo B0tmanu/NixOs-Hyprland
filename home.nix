@@ -21,9 +21,7 @@
   xdg.dataFile."rofi".source = ./locals/rofi;
 
   home.activation.reloadHyprland = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    if command -v hyprctl >/dev/null 2>&1; then
-      hyprctl reload
-    fi
+    ${pkgs.hyprland}/bin/hyprctl reload
   '';
 
 
