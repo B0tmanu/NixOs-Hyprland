@@ -62,7 +62,6 @@
       home = "cd ~";
       vi = "nvim";
       nixconfig = "sudoedit /etc/nixos/configuration.nix";
-      nixgen = "sudo nixos-rebuild switch --flake ~/nixos#bot";
       nixupdate = "sudo nixos-rebuild switch --upgrade";
       svi = "sudoedit";
       ls = "eza -a --group-directories-first";
@@ -78,7 +77,9 @@
       end
       function nixgen
           sudo nixos-rebuild switch --flake ~/nixos#bot
-          and hyprctl reload
+          if test $status -eq 0
+              hyprctl reload
+          end
       end
     '';
   };
