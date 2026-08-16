@@ -17,10 +17,23 @@
   # Use latest kernel.
   #boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  nix.settings.experimental-features = [
-  "nix-command"
-  "flakes"
-  ];
+
+  nix.settings = {
+  	experimental-features = [
+  	"nix-command"
+  	"flakes"
+  	];
+
+  	auto-optimise-store = true;
+
+  	download-buffer-size = 268435456;
+  };
+
+  nix.gc = {
+	automatic = true;
+	dates = "weekly";
+	options = "--delete-older-than 14d";
+  };
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
