@@ -1,0 +1,41 @@
+[
+    {
+        "layer": "top",
+        "width": 200,
+        "output": "DP-1",
+        "include": [
+            "~/.config/waybar/modules/*.jsonc"
+        ],
+        "modules-left": [
+            
+            
+        ],
+        "modules-center": [
+            "clock",
+            "hyprland/workspaces"
+            
+        ],
+        "modules-right": [
+            
+            "tray"
+        ]
+    },
+    {
+        "layer": "top",
+        "width": 25,
+        "height": 34,
+        "output": "HDMI-A-1",
+        "include": [
+            "~/.config/waybar/modules/*.jsonc"
+        ],
+        "modules-left": [
+            
+        ],
+        "modules-center": [
+            "clock"
+        ],
+        "modules-right": [
+           
+        ]
+    }
+]

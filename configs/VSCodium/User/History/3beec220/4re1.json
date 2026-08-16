@@ -1,0 +1,6 @@
+{
+    "vim.useSystemClipboard": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.productIconTheme": "material-product-icons"
+}

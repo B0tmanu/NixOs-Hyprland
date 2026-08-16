@@ -1,0 +1,17 @@
+{"pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": "",
+    "scroll-step": 5,
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "phone-muted": "",
+        "portable": "",
+        "car": "",
+        "default": ""
+    },
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+}}
