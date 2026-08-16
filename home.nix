@@ -20,10 +20,6 @@
 
   xdg.dataFile."rofi".source = ./locals/rofi;
 
-  home.activation.reloadHyprland = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    ${pkgs.hyprland}/bin/hyprctl reload
-  '';
-
 
   home.packages = with pkgs; [
     eza
@@ -79,6 +75,10 @@
       function cd
           builtin cd $argv
           and eza -a --group-directories-first
+      end
+      function nixgen
+          sudo nixos-rebuild switch --flake ~/nixos#bot
+          and hyprctl reload
       end
     '';
   };
