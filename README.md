@@ -29,3 +29,11 @@ Then rebuild
 ```
 $ sudo nixos-rebuild switch --flake ~/NixOs-Hyprland#bot
 ```
+
+Then put this in .bash_profile
+
+```
+if [[ -z "$WAYLAND_DISPLAY" && "$XDG_VTNR" == "1" ]]; then
+    exec start-hyprland
+fi
+```
